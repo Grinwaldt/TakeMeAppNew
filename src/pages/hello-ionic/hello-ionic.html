@@ -1,3 +1,4 @@
+
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
@@ -10,16 +11,32 @@
 
 <ion-content padding>
 
-  <h3>Welcome to your first Ionic app!</h3>
+  <!-- get props of title -->
+  <h3>ברכת המזון </h3>
 
   <p>
-    This starter project is our way of helping you get a functional app running in record time.
+באיזה  תדירות תרצה שנזכיר לך  </p>
+  <p>
+        <ion-list radio-group
+        name="radio-group"
+        (ionChange)="radioGroupChange($event)">
+        <ion-item
+                (ionSelect)="radioSelect($event)">
+            <ion-label>יומי</ion-label>
+            <ion-radio value="daily"></ion-radio>
+          </ion-item>
+          <ion-item>
+              <ion-label>שבועי</ion-label>
+              <ion-radio value="weekly"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>חודשי</ion-label>
+                <ion-radio value="monthly"></ion-radio>
+              </ion-item>
+              </ion-list>
   </p>
   <p>
-    Follow along on the tutorial section of the Ionic docs!
-  </p>
-  <p>
-    <button ion-button color="primary" menuToggle>Toggle Menu</button>
+    <button ion-button  color="success" (click)="addTask()" >Jew me app</button>
   </p>
 
 </ion-content>
