@@ -1,20 +1,26 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
+    <button ion-button menuToggle class="menu-btn">
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>My First List</ion-title>
+    <ion-title>אתגרים לשיפור</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
+
   <ion-list>
     <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon name="{{item.icon}}" item-left></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-right>
-        {{item.note}}
-      </div>
+          <ion-card>
+              <ion-card-content class="card-cont">
+                   <img src="{{item.icon}}" class="icon" />
+                    {{item.title}}
+                    <!-- <div class="item-note" item-right>
+                      {{item.note}}
+                    </div> -->
+                  </ion-card-content>
+                </ion-card>
     </button>
+
   </ion-list>
 </ion-content>

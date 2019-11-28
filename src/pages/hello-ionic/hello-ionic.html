@@ -1,42 +1,19 @@
 
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
+    <button ion-button menuToggle  class="menu-btn">
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Hello Ionic</ion-title>
+    <ion-title>JEW Me App</ion-title>
   </ion-navbar>
 </ion-header>
 
+    <ion-content>  
 
-<ion-content padding>
+          <div class="open-screen">  
+            <!-- <h1>Jew me app!</h1>          -->
+            <img src="../../../assets/icon/kippa.svg" alt="Avatar" class="opening-image">
+                <button ion-button color="success"  (click)="GoToNewPage()">בחר אתגר</button> 
 
-  <!-- get props of title -->
-  <h3>ברכת המזון </h3>
-
-  <p>
-באיזה  תדירות תרצה שנזכיר לך  </p>
-  <p>
-        <ion-list radio-group
-        name="radio-group"
-        (ionChange)="radioGroupChange($event)">
-        <ion-item
-                (ionSelect)="radioSelect($event)">
-            <ion-label>יומי</ion-label>
-            <ion-radio value="daily"></ion-radio>
-          </ion-item>
-          <ion-item>
-              <ion-label>שבועי</ion-label>
-              <ion-radio value="weekly"></ion-radio>
-            </ion-item>
-            <ion-item>
-                <ion-label>חודשי</ion-label>
-                <ion-radio value="monthly"></ion-radio>
-              </ion-item>
-              </ion-list>
-  </p>
-  <p>
-    <button ion-button  color="success" (click)="addTask()" >Jew me app</button>
-  </p>
-
-</ion-content>
+          </div>
+      </ion-content>

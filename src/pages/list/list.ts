@@ -13,17 +13,32 @@ export class ListPage {
   items: Array<{title: string, note: string, icon: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-    'american-football', 'boat', 'bluetooth', 'build'];
+ 
+    this.items = [{
+      title: 'ברכת המזון' ,
+      note: 'Take this challenge' ,
+      icon: "../../assets/icon/tfila.svg"
+    },{
+      title: 'לימוד תורה' ,
+      note: 'Take this challenge' ,
+      icon: "../../assets/icon/Tora.svg"
+    },{
+      title: 'תפילה' ,
+      note: 'Take this challenge' ,
+      icon: "../../assets/icon/tfila.svg"
+    },{
+      title: 'הנחת תפילין' ,
+        note: 'Take this challenge' ,
+        icon: "../../assets/icon/tfilin.svg"
+      }];
 
-    this.items = [];
-    for(let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }
+    // for(let i = 1; i < 11; i++) {
+    //   this.items.push({
+    //     title: 'ברכת המזון' ,
+    //     note: 'Take this challenge' ,
+    //     icon: this.icons[Math.floor(Math.random() * this.icons.length)]
+    //   });
+    // }
   }
 
   itemTapped(event, item) {
@@ -31,4 +46,5 @@ export class ListPage {
       item: item
     });
   }
+
 }
