@@ -1,16 +1,42 @@
+
 <ion-header>
   <ion-navbar>
-    <button menuToggle class="menu-btn" *ngIf="!selectedItem">
+    <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <h3 text-center *ngIf="selectedItem">
-        <b>{{selectedItem.title}}</b>
-        <ion-icon [name]="selectedItem.icon"></ion-icon>
-    </h3>
+    <ion-title>הגדר משימה</ion-title>
   </ion-navbar>
 </ion-header>
-
-<ion-content>
-    <ion-title text-center>בחר תדירות</ion-title>
-
+ 
+ 
+<ion-content padding>
+ 
+  <!-- get props of title -->
+  <h3>{{selectedItem.title}} </h3>
+ 
+  <p>
+באיזה  תדירות תרצה שנזכיר לך  </p>
+  <p>
+        <ion-list radio-group
+        name="radio-group"
+        (ionChange)="radioGroupChange($event)">
+        <ion-item
+                (ionSelect)="radioSelect($event)">
+            <ion-label>יומי</ion-label>
+            <ion-radio value="dayly"></ion-radio>
+          </ion-item>
+          <ion-item>
+              <ion-label>שבועי</ion-label>
+              <ion-radio value="weekly"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>חודשי</ion-label>
+                <ion-radio value="monthly"></ion-radio>
+              </ion-item>
+              </ion-list>
+  </p>
+  <p>
+    <button ion-button  color="success" (click)="addTask(selectedItem)" >Jew me app</button>
+  </p>
+ 
 </ion-content>

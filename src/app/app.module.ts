@@ -9,6 +9,7 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { TasksService } from './services/tasks.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    TasksService,
+
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    
   ]
 })
 export class AppModule {}
