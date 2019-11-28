@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
-import {Task} from './models/task.ts';
-@Injectable({
-    providedIn: 'root'
-})
+import {Task} from './models/task';
+@Injectable()
 export class TasksService {
 	tasks :Task[]=[];
 	constructor() {
