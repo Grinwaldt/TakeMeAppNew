@@ -23,13 +23,13 @@ export class ListPage {
       note: 'Take this challenge' ,
       icon: "../../assets/icon/Tora.svg"
     },{
-      title: 'תפילה' ,
-      note: 'Take this challenge' ,
-      icon: "../../assets/icon/tfila.svg"
-    },{
       title: 'הנחת תפילין' ,
         note: 'Take this challenge' ,
         icon: "../../assets/icon/tfilin.svg"
+    },{
+      title: 'תפילה' ,
+      note: 'Take this challenge' ,
+      icon: "../../assets/icon/tfila.svg"
       }];
 
     // for(let i = 1; i < 11; i++) {
