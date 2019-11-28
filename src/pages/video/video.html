@@ -11,5 +11,8 @@
 </ion-header>
 
 <ion-content padding>
-
+    <button ion-button size="small" (click)="openVideo()">Open Video Player</button>
+    <iframe [src]="'https://www.youtube.com/watch?v=DA0HAhgQCz4&list=PLBcT29Hg53cw7YhDXFSZ-WY1SLdZnjY07&index=10'" allow="autoplay;" frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </ion-content>
+"
