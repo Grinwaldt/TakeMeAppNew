@@ -12,14 +12,6 @@ export class HelloIonicPage {
   // private document: DocumentViewer,
   constructor(public navCtrl: NavController) {
 
-  radioGroupChange(e){
-    this.newTask.title = "fdsfds";
-    this.newTask.id =5; 
-    this.newTask.freqency = e;
- 
-  }
-  addTask(){
-    this.tasksService.addTask(this.newTask);
   }
   GoToNewPage() {
     this.navCtrl.push(ListPage);

@@ -32,8 +32,10 @@ import { TasksService } from './services/tasks.service';
   providers: [
     StatusBar,
     SplashScreen,
+    TasksService,
+
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    TasksService
+    
   ]
 })
 export class AppModule {}
