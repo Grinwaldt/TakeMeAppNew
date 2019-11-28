@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {TasksService} from '../../app/services/tasks.service.ts';
+import {TasksService} from '../../app/services/tasks.service';
 import { NavController, NavParams } from 'ionic-angular';
 
 
