@@ -12,4 +12,13 @@ export class TasksService {
 		this.tasks.push(task);
 	}
 
+	editTask(id){
+
+		this.tasks.getUpdate(item.id)
+		.subscribe(updatedItem => {
+		  item = updatedItem;
+		});
+		this.tasks.find()
+	}
+
 }

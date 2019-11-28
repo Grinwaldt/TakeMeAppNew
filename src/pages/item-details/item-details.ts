@@ -30,10 +30,10 @@ export class ItemDetailsPage {
     this.tasksService.addTask(this.newTask);
 
     if(this.newTask.id === 1 ){
-      this.navCtrl.push(VideoPage);
+      this.navCtrl.push(ReadingPage);
     }
     if(this.newTask.id === 2 ){
-      this.navCtrl.push(ReadingPage);
+      this.navCtrl.push(VideoPage);
     }
   }
 
