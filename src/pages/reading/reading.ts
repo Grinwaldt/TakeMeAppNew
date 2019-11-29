@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {TasksService} from '../../app/services/tasks.service';
 
+// import {file} from '../../assets/documents/prayer.pdf'
 /**
  * Generated class for the ReadingPage page.
  *
@@ -14,12 +16,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'reading.html',
 })
 export class ReadingPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+image:string;
+  constructor(public navCtrl: NavController, public navParams: NavParams,private tasksService : TasksService) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ReadingPage');
+  
   }
+  
+  completed(){
 
+
+    this.tasksService.editTask(1);
+
+    }
+  }
 }
