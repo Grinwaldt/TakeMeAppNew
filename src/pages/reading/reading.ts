@@ -32,4 +32,4 @@ image:string;
 
     }
   }
-}
+

@@ -3,7 +3,7 @@ import { Task } from '../models/task';
 
 @Injectable()
 export class TasksService {
-	tasks: Task[] = [{title:'ברכת המזון',count:1,count:2,freqency:'daily'}];
+	tasks: Task[] = [];
 	constructor() {
 
 	}
