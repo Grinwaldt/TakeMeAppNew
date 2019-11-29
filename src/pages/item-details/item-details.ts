@@ -13,7 +13,7 @@ import { Task } from '../../app/models/task';
 })
 export class ItemDetailsPage {
   selectedItem: any;
-  newTask :  Task = { id : 0,title : '', freqency :'', completedCounts : 0};
+  newTask :  Task = { id : 0,title : '', freqency :'', count : 0};
   constructor(public navCtrl: NavController, public navParams: NavParams,private tasksService : TasksService) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
