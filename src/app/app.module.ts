@@ -8,6 +8,8 @@ import { MyApp } from './app.component';
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
+import { MyTasksPage} from '../pages/my-tasks/my-tasks';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,7 +24,8 @@ import { ReadingPage } from '../pages/reading/reading';
     ItemDetailsPage,
     ListPage,
     VideoPage,
-    ReadingPage
+    ReadingPage,
+    MyTasksPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { ReadingPage } from '../pages/reading/reading';
     ItemDetailsPage,
     ListPage,
     VideoPage,
-    ReadingPage
+    ReadingPage,
+    MyTasksPage
   ],
   providers: [
     StatusBar,

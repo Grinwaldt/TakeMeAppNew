@@ -1,6 +1,6 @@
 export class Task{
 id:number;
 title:string;
-completedCounts:number;
+count:number =0;
 freqency : string;
 }
