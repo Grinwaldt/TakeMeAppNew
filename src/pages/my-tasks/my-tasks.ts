@@ -22,7 +22,7 @@ tasks:Task[]=[];
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MyTasksPage');
-  // this.tasks= this.tasksService.getTasks();
+  this.tasks= this.tasksService.getTasks();
   }
 
 

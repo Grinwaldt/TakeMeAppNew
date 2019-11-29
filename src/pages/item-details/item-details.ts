@@ -29,11 +29,11 @@ export class ItemDetailsPage {
     this.newTask.id =selectedItem.id; 
     this.tasksService.addTask(this.newTask);
 
-    if(this.newTask.id === 1 ){
-      this.navCtrl.push(ReadingPage);
-    }
     if(this.newTask.id === 2 ){
       this.navCtrl.push(VideoPage);
+    }
+    if(this.newTask.id === 1 ){
+      this.navCtrl.push(ReadingPage);
     }
   }
 

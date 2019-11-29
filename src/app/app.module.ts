@@ -4,7 +4,6 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
 
 import { MyApp } from './app.component';
-
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
@@ -25,7 +24,9 @@ import { ReadingPage } from '../pages/reading/reading';
     ListPage,
     VideoPage,
     ReadingPage,
-    MyTasksPage
+    MyTasksPage,
+    ReadingPage
+ 
   ],
   imports: [
     BrowserModule,
@@ -39,14 +40,16 @@ import { ReadingPage } from '../pages/reading/reading';
     ListPage,
     VideoPage,
     ReadingPage,
-    MyTasksPage
+    MyTasksPage,
+    ReadingPage
+
   ],
   providers: [
     StatusBar,
     SplashScreen,
     TasksService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
+
   ]
 })
 export class AppModule {}

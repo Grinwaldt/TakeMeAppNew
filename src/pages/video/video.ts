@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {DomSanitizer} from '@angular/platform-browser';
+import { TasksService } from '../../app/services/tasks.service';
 
 /**
  * Generated class for the VideoPage page.
@@ -15,11 +17,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class VideoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public  sanitizer:DomSanitizer,
+    private tasksService: TasksService) {
   }
+
+  
+  
+  
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad VideoPage');
-  }
+    var vid = document.getElementById("myVideo"); 
+    vid.addEventListener('ended', (event) => {
+      console.log('Video stopped either because 1) it was over, ' +
+          'or 2) no further data is available.');
+    });
 
+  }
+ 
 }
