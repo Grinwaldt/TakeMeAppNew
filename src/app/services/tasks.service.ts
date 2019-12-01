@@ -3,7 +3,8 @@ import { Task } from '../models/task';
 
 @Injectable()
 export class TasksService {
-	tasks: Task[] = [{title:'ברכת המזון',count:1,count:2,freqency:'daily'}];
+	tasks: Task[] = [{title:'ברכת המזון',count:1,id:1,freqency:'daily'},
+	                 {title:'לימוד תורה',count:1,id:2,freqency:'daily'}];
 
 	const options =
    [{
@@ -36,16 +37,15 @@ export class TasksService {
 	}
 
 	addTask(task) {
-		console.log("I do something useful!", task);
-		let tempTask = this.options.filter(item => Item.id == task.id);
-		tempTask.count++;
-		this.tasks.push(tempTask);
+		//TODO: Check if task is exsit - edit it or add new by diff freq..?
+		this.tasks.push(task);
 	}
 	getTasks(){
 		return this.tasks;
 	}
 
 	editTask(id) {
+		console.log('tt',this.tasks);
 		this.tasks.map(item => {
 			if (item.id === id) {
 				item.count++;
@@ -54,8 +54,6 @@ export class TasksService {
 		}
 		);
 
-
-		
 	}
 
 }

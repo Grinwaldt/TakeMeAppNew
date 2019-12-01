@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {TasksService} from '../../app/services/tasks.service';
+import { ListPage } from '../list/list';
 
 // import {file} from '../../assets/documents/prayer.pdf'
 /**
@@ -27,9 +28,11 @@ image:string;
   
   completed(){
 
-
     this.tasksService.editTask(1);
+
+    this.navCtrl.push(ListPage);
+
 
     }
   }
-}
+

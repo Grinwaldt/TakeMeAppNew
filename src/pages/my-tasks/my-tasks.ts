@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {TasksService} from '../../app/services/tasks.service';
-import {Task} from './my-tasks.module'
+import { Task } from '../../app/models/task';
+// import {Task} from './my-tasks.module'
 /**
  * Generated class for the MyTasksPage page.
  *
